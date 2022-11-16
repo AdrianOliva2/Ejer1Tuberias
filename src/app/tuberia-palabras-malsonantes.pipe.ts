@@ -7,7 +7,7 @@ export class TuberiaPalabrasMalsonantesPipe implements PipeTransform {
 
   transform(value: string, args: string): string {
     let palabras = args.split(',');
-    if (palabras.filter(v => v == value).length > 0) {
+    if (palabras.filter(v => v.toLowerCase() == value.toLowerCase()).length > 0) {
       let cadena: string = "";
       for (let i = 0; i < value.length; i++){
         cadena += "*";
